@@ -3,12 +3,11 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.ts',
+  entry: './src/app.js',
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-    // publicPath: '/assets/',
   },
   module: {
     rules: [
@@ -27,12 +26,8 @@ module.exports = {
       patterns: [
         {from: '*.css', context: 'src/css/'},
         {from: 'src/index.html'},
-        {from: 'assets/audio/speech', to: 'assets/audio/speech'},
-        {from: 'assets/audio/ambient', to: 'assets/audio/ambient'},
-        {from: 'assets/cubemaps', to: 'assets/cubemaps'},
-        {from: 'assets/user', to: 'assets/user'},
-        {from: 'assets/hud', to: 'assets/hud'},
-        {from: '*.png', context: 'assets/webpage/'},
+        //{from: 'assets/audio/speech', to: 'assets/audio/speech'},
+        //{from: '*.png', context: 'assets/webpage/'},
       ],
     }),
   ],
