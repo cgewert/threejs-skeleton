@@ -1,0 +1,26 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "An entry for Brackeys Game Jam 2020.2",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:css && npm run build:package",
+    "build:package": "webpack --config webpack.config.js",
+    "build:css": "node-sass src/scss/ -o src/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Gewert <cgewert@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dat.gui": "^0.7.7",
+    "three": "^0.119.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "node-sass": "^4.14.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1"
+  }
+}
