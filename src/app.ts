@@ -1,11 +1,24 @@
 class Application{
-  constructor(public points:Number){
-    console.log('Hello Brackys Game Jam!');
+  constructor(){
+    
+  }
+
+  public initialize(){
+
   }
 
   public run(){
     
   }
+
+  public update(time: number){
+
+  }
+
+  public render(time: number){
+    
+  }
 }
 
-const app = new Application(100);
+const app = new Application();
+app.run();

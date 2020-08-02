@@ -5,11 +5,13 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "prebuild": "npm run lint && npm run test",
     "build": "npm run build:css && npm run build:js && npm run build:package",
     "build:js": "tsc -p ./tsconfig.json",
     "build:package": "webpack --config webpack.config.js",
     "build:css": "node-sass src/scss/ -o src/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./src --ext .ts",
+    "test": "jest --passWithNoTests"
   },
   "author": "Christian Gewert <cgewert@gmail.com>",
   "license": "ISC",
@@ -18,8 +20,12 @@
     "three": "^0.119.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.3",
+    "eslint": "^7.6.0",
+    "jest": "^26.2.2",
     "node-sass": "^4.14.1",
     "typescript": "^3.9.7",
     "webpack": "^4.44.1",

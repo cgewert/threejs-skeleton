@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "overrides": [
+    {
+      "files": "./**/*.js",
+      "rules": {
+      "max-len": "off",
+      "no-undef": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended"
+  ],
+  
+  "rules": {
+    "max-len": ["warn", 120],
+    "no-empty-function": "warn",
+    "no-unused-vars": "warn"
+  }
+}

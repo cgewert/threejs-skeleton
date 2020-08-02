@@ -1,4 +1,5 @@
 /node_modules
-**/*.js
+src/**/*.js
 /src/css
 /dist
+*.js.map
