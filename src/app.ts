@@ -1,6 +1,10 @@
+import * as THREE from 'three';
+
 class Application{
+  private clock: THREE.Clock;
+
   constructor(){
-    
+    this.clock = new THREE.Clock();
   }
 
   public initialize(){
