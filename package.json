@@ -1,7 +1,7 @@
 {
   "name": "untitled",
   "version": "1.0.0",
-  "description": "An entry for Brackeys Game Jam 2020.2",
+  "description": "3D Game Development Application Skeleton",
   "private": true,
   "main": "index.js",
   "scripts": {
