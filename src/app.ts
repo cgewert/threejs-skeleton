@@ -3,7 +3,7 @@ import { InputComponent } from './components/input/input.component';
 
 class Application{
   private clock: THREE.Clock;
-  private inputComponent: InputComponent
+  private inputComponent: InputComponent;
 
   constructor(){
     this.clock = new THREE.Clock();
