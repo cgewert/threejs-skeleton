@@ -113,6 +113,32 @@ export class InputComponent{
   }
 
   /**
+   * Returns true, if the given key was pressed in the last update iteration,
+   * otherwise false.
+   * @param {KeyboardKeys} key - The key to query.
+   * @returns {boolean}
+   */
+  public wasKeyPressed(key: KeyboardKeys): boolean {
+    const isNotPressed = this._pressedKeys.indexOf(key) === -1;
+    const wasPressed = this._pressedKeysOld.indexOf(key) !== -1;
+
+    return isNotPressed && wasPressed;
+  }
+
+  /**
+   * Returns true, if the given mouse button was pressed in the last update 
+   * iteration, otherwise false.
+   * @param {MouseButtons} button - The mouse button to query.
+   * @returns {boolean}
+   */
+  public wasButtonPressed(button: MouseButtons): boolean {
+    const isNotPressed = this._pressedMouseButtons.indexOf(button) === -1;
+    const wasPressed = this._pressedMouseButtonsOld.indexOf(button) !== -1;
+
+    return isNotPressed && wasPressed;
+  }
+
+  /**
    * Updates the InputComponent state.
    * @param {number} time - Seconds since last update call.
    */
