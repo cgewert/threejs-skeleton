@@ -4,6 +4,9 @@
   "description": "3D Game Development Application Skeleton",
   "private": true,
   "main": "index.js",
+  "engines": {
+    "node": ">=0.12"
+  },
   "scripts": {
     "prebuild": "npm run lint && npm run test",
     "build": "npm run build:css && npm run build:js && npm run build:package",
